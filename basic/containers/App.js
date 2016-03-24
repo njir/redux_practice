@@ -10,9 +10,20 @@ class App extends Component {
         const { dispatch, visibleTodos, visibilityFilter } = this.props;
         return {
             <div>
-            <AddTodo onAddClick = { text => dispatch(addTodo(text)) } />
-            <TodoList todos = { visibleTodos } onTodoClick = { index => dispatch(completeTodo(index)) />
-            <Footer filter = {visibilityFilter } onFilterChange = { nextFilter => dispatch(setVisibilityFilter(nextFilter))} />
+              <AddTodo 
+                onAddClick = { text => 
+                dispatch(addTodo(text)) 
+              } />
+              <TodoList 
+                todos = { visibleTodos } 
+                onTodoClick = { index => 
+                dispatch(completeTodo(index))
+              } />
+              <Footer 
+                filter =  {visibilityFilter } 
+                onFilterChange = { nextFilter => 
+                dispatch(setVisibilityFilter(nextFilter))
+              } />
             </div>
         };
     }
